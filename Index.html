@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Marcenaria Morges</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Poppins", sans-serif;font-size:16px;}
+h1 {font-family: "Poppins", sans-serif;}
+h2 {font-family: "Poppins", sans-serif;}
+h3 {font-family: "Poppins", sans-serif; color: white;}
+h4 {font-family: "Poppins", sans-serif;}
+h5 {font-family: "Poppins", sans-serif;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer;}
+.w3-half img:hover{opacity:1}
+.whatsapp-link {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 40px;
+			right: 40px;
+			background-color: #25d366;
+			color: #fff;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 1px 1px 2px #888;
+			z-index: 1000;
+		}
+.fa-whatsapp {
+			margin-top: 16px;
+</style>
+</head>
+<body>
+
+
+  <!-- Link whatsapp-->
+<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5531989610861" target="_blank">
+  <i class="fa fa-whatsapp"></i>
+</a>
+  
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Fechar Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Marcenaria<br>Morges</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Início</a> 
+    <a href="#mostuario" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Mostruário</a> 
+    <a href="#servico" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Serviços</a> 
+    <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contatos</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Marcenaria Morges</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="mostuario">
+    <h1 class="w3-jumbo"><b>Móveis Planejados</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Mostruário.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://blog.easydeco.com.br/wp-content/uploads/2019/02/moveis-planejados-ou-prontos-qual-a-melhor-opcao-para-sua-casa.jpeg" style="width:100%" onclick="onClick(this)" alt="Cozinha aberta com bancada">
+      <img src="http://bartzmoveis.com.br/wp-content/uploads/2018/11/Closet-Bartz-04.png" style="width:100%" onclick="onClick(this)" alt="Closet do quarto de casal">
+      <img src="http://www.linhanovamoveis.com.br/escritorio/escritorio-planejado-02.jpg" style="width:100%" onclick="onClick(this)" alt="Escritório">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://www.decorfacil.com/wp-content/uploads/2017/09/20170906sala-planejada-40.jpg" style="width:100%" onclick="onClick(this)" alt="Sala de estar">
+      <img src="http://henns.com.br/public/uploads/service-7.jpg" style="width:100%" onclick="onClick(this)" alt="Quarto de casal">
+      <img src="https://i.pinimg.com/originals/51/cd/87/51cd8777d80d128e14a49985deaa729c.jpg" style="width:100%" onclick="onClick(this)" alt="Quarto dos filhos">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Serviços -->
+  <div class="w3-container" id="servico" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Serviços.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>A Marcenaria Morges está no mercado a mais de 20 anos, planejando, criando, e montando sonhos!</p>
+    <p>A sua casa dos sonhos, seu quarto, sua área de lazer, seu escritório ou onde quiser pode ficar ainda melhor com móveis planjados, algo feito especialmente para tal local e para você, que atenda todas as suas necessidades da melhor forma possível. É isso que nós da Marcenaria Morges podemos poporcionar a você, junto à um preço justo e que cabe no seu bolso.
+    </p>
+  </div>
+  
+  <!-- Contato -->
+  <div class="w3-container" id="contato" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contatos.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Gostou da ideia de fazer algo unicamente para você e suas necessidades? Então venha fazer um orçamento conosco!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Nome</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>E-mail</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Diga-nos sobre suas ideias</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Enviar</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
